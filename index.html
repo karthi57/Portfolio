@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo"></a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+
+    <section>
+        <img src="assets/stars.png" id="stars">
+        <img src="assets/moon.png" id="moon">
+        <h2 id="text">Welcome</h2>
+        <a href="#sec" id="btn"> Explore </a>
+        <img src="assets/mountains_behind.png" id="mountains_behind">
+        <img src="assets/mountains_front.png" id="mountains_front">
+    </section>
+
+    <div class="sec" id="sec">
+
+        <span class="pic">
+
+            <img src="assets/Karthik.jpg" class="profile" alt="">
+        </span>
+        <span id="About">
+            <p>
+            <h2>Hii there,<br> I'm Karthik, Web developer </h2>
+            </p>
+            <br><br>
+            <span class="first">
+                <p>Passionate web developer and designer with a flair for creating immersive digital experiences.
+                    Specializing in front-end
+                    development, I craft visually stunning and user-friendly websites that leave a lasting impression.
+                    Constantly seeking
+                    innovative solutions, I thrive on pushing boundaries and keeping up with the latest trends in the
+                    industry. Let's
+                    collaborate and bring your web presence to life!.<br><br> believe that the digital world is an
+                    exciting
+                    playground where creativity meets technology,I strive to combine aesthetics and functionality to
+                    deliver exceptional results.
+                </p>
+            </span>
+        </span>
+
+        <p>As I delved deeper into the realm of web design, I discovered the incredible impact that a well-designed
+            website can
+            have on enhancing user experiences and achieving business goals. This realization ignited a fire within me
+            and sparked
+            my journey to become a skilled web and UI designer.
+            <br>
+        </p>
+        <br>
+        <span class="pro">
+            <h2 id="Projects">Projects</h2>
+        </span>
+
+        <div class="container">
+            <!-- PROJECTS -->
+            <div class="card">
+                <div class="align">
+                    <span class="red"></span>
+                    <span class="yellow"></span>
+                    <span class="green"></span>
+                </div>
+                <div class="info">
+                    <h1>Info Chat AI</h1>
+                    <p>
+                        InfoChat_AI is a compassionate AI study companion, leveraging Python to assist students seamlessly. It simplifies learning by engaging in natural conversations, clarifying doubts, and offering academic guidance. Think of it as a helpful friend, making studying more interactive and enjoyable.<br>
+                        <button id="btn1" style="margin-left: 30%; margin-top: 10%;"><a href="">Read more</a></button>
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="align">
+                    <span class="red"></span>
+                    <span class="yellow"></span>
+                    <span class="green"></span>
+                </div>
+                <div class="info">
+                    <h1>PDF Chat</h1>
+                    <p>
+                        PDF_Chatter employs AI to extract and comprehend PDF content, generating insightful summaries for easy digestion. Its ability to answer questions accurately enhances user interaction with PDF documents, revolutionizing information accessibility and productivity.<br>
+                        <button id="btn1" style="margin-left: 30%; margin-top: 10%;"><a href="">Read more</a></button>
+                    </p>
+
+                </div>
+            </div>
+
+            <br><br>
+            <div class="card">
+                <div class="align">
+                    <span class="red"></span>
+                    <span class="yellow"></span>
+                    <span class="green"></span>
+                </div>
+                <div class="info">
+                    <h1>DBMS project</h1>
+                    <p>
+                        The hostel student management system is a comprehensive software solution designed to streamline
+                        and
+                        efficiently manages student admissions, room allocations, attendance records, and
+                        facilitates effective communication between students, staff, and administration.<br>
+                        <button id="btn1" style="margin-left: 30%; margin-top: 10%;"><a href="">Read more</a></button>
+                    </p>
+
+                </div>
+            </div>
+            
+        </div>
+<!-- CONTACTS -->
+<div class="contacts">
+    <h2>Contact</h2>
+    <ul class="wrapper">
+        <a href="mailto:karthikr0591@gmail.com"><li class="icon facebook">
+            <span class="tooltip">Email</span>
+            <span><i class="fab fa-facebook-f"></i></span>
+        </li></a>
+        <a href="https://www.linkedin.com/in/karthik-r-web-developer/"><li class="icon twitter">
+            <span class="tooltip">LinkedIn</span>
+            <span><i class="fab fa-twitter"></i></span>
+        </li></a> 
+        <!-- <li class="icon instagram">
+            <span class="tooltip">@vibeswithkarthik</span>
+            <span><i class="fab fa-instagram"></i> <a href=""></a> </span>
+            
+        </li> -->
+    </ul>
+</div>
+
+    </div>
+
+
+
+
+    <script>
+        let stars = document.getElementById('stars');
+        let stars1 = document.getElementById('stars1');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+
+        let mountains_front = document.getElementById('mountains_front');
+
+        let text = document.getElementById('text');
+
+        let btn = document.getElementById('btn');
+
+
+        window.addEventListener('scroll', function () {
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            // stars1.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+
+            mountains_front.style.top = value * 0 + 'px';
+
+
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1 + 'px';
+
+
+
+
+            btn.style.marginTop = value * 1.5 + 'px';
+
+        })
+
+    </script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
